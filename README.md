@@ -3,6 +3,10 @@
 Coinbase Quantitative Trading library
 
 ## Setup
+Install requirements
+```bash
+pip install -r requirements.txt
+```
 Import the library
 ```python
 import CBQ
