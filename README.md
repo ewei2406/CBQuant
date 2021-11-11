@@ -25,4 +25,6 @@ wallets = acc.get_wallets()
 fig, ax = visualizations.show_pie(wallets)
 plt.show()
 ```
+![image](https://user-images.githubusercontent.com/34495421/141376463-0e11b665-52c3-4239-95f1-0db6a4728ef0.png)
+
 
