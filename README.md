@@ -44,8 +44,6 @@ plt.show()
 ```
 <img src="images/DOGE_USD_Book.png" alt="drawing" width="500"/>
 
----
-
 ## Testing
 Using `pytest`
 ```python
