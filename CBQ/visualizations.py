@@ -4,7 +4,7 @@ import pandas as pd
 
 def show_pie(account, fig1=None, ax1=None):
 
-    if not fig1 and ax1:
+    if not fig1 and not ax1:
         fig1, ax1 = plt.subplots()
 
     labels = [
@@ -22,9 +22,9 @@ def show_pie(account, fig1=None, ax1=None):
     return fig1, ax1
 
 
-def show_book(book, depth=50, fig1=None, ax1=None):
+def show_book(book, depth, title, fig1=None, ax1=None):
 
-    if not fig1 and ax1:
+    if not fig1 and not ax1:
         fig1, ax1 = plt.subplots()
 
     bids = pd.DataFrame(book['bids'])
@@ -65,14 +65,22 @@ def show_book(book, depth=50, fig1=None, ax1=None):
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
     ax1.spines['left'].set_visible(False)
-    plt.yticks([])
+
+    highest_bid = bids.head(1)[0][0]
+    lowest_ask = asks.head(1)[0][0]
+
+    fig1.suptitle(f"Order book for {title}\n" +
+                  f"Highest Bid: ${highest_bid:<.4f}\n" +
+                  f"Lowest Ask: ${lowest_ask:<.4f}\n")
+
+    plt.yticks([])    
 
     return fig1, ax1
 
 
 def show_book_distribution(book, deviation, fig1=None, ax1=None):
 
-    if not fig1 and ax1:
+    if not fig1 and not ax1:
         fig1, ax1 = plt.subplots()
     
     

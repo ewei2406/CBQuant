@@ -86,8 +86,9 @@ class CoinbaseAccount:
         return account
 
     def get_book(self, pair):
-        r = self.create_request("GET", f"/products/{pair}/book?level=2")
-        return r
+        res = self.create_request("GET", f"/products/{pair}/book?level=2")
+        book = json.loads(res.content)
+        return book
 
 
 if __name__ == "__main__":
