@@ -38,3 +38,5 @@ book = acc.get_book("DOGE-USD")
 visualizations.show_book(b, 100, "DOGE-USD")
 plt.show()
 ```
+![image](https://user-images.githubusercontent.com/34495421/141377805-fe9177c7-b971-459c-9558-a7dd3bed6731.png)
+
