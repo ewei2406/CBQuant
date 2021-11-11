@@ -1,5 +1,6 @@
 from CBQ import account
 import secrets
+import json
 
 
 acc = account.CoinbaseAccount(
@@ -8,3 +9,5 @@ acc = account.CoinbaseAccount(
     API_PASSPHRASE=secrets.API_PASSPHRASE)
 
 
+res = acc.get_wallets()
+print(res)
