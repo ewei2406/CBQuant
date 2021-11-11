@@ -31,7 +31,7 @@ wallets = acc.get_wallets()
 visualizations.show_pie(wallets)
 plt.show()
 ```
-![image](https://user-images.githubusercontent.com/34495421/141376463-0e11b665-52c3-4239-95f1-0db6a4728ef0.png)
+<img src="images/Portfolio_Pie.png" alt="drawing" width="200"/>
 
 ### Get the order book for a product pair
 ```python
@@ -42,5 +42,5 @@ book = acc.get_book("DOGE-USD")
 visualizations.show_book(b, 100, "DOGE-USD")
 plt.show()
 ```
-![image](https://user-images.githubusercontent.com/34495421/141377805-fe9177c7-b971-459c-9558-a7dd3bed6731.png)
+<img src="images/DOGE_USD_Book.png" alt="drawing" width="200"/>
 
