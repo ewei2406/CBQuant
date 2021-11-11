@@ -1,1 +1,28 @@
 # CBQuant
+
+Coinbase Quantitative Trading library
+
+## Setup
+Import the library
+```python
+import CBQ
+```
+
+## Usage
+Create an Coinbase Account object using API credentials
+```python
+from CBQ import account
+
+acc = account.CoinbaseAccount(
+    API_KEY=YOUR_API_KEY,
+    API_SECRET=YOUR_API_SECRET,
+    API_PASSPHRASE=YOUR_API_PASSPHRASE)
+
+```
+Show the distribution of capital for all wallets in a portfolio
+```python
+wallets = acc.get_wallets()
+fig, ax = visualizations.show_pie(wallets)
+plt.show()
+```
+
