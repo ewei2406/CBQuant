@@ -1,3 +1,5 @@
+[![Run Tests](https://github.com/ewei2406/CBQuant/actions/workflows/Run_Tests.yml/badge.svg?branch=main)](https://github.com/ewei2406/CBQuant/actions/workflows/Run_Tests.yml)
+
 # CBQuant
 
 Coinbase Quantitative Trading library
