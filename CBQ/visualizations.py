@@ -68,3 +68,11 @@ def show_book(book, depth=50, fig1=None, ax1=None):
     plt.yticks([])
 
     return fig1, ax1
+
+
+def show_book_distribution(book, deviation, fig1=None, ax1=None):
+
+    if not fig1 and ax1:
+        fig1, ax1 = plt.subplots()
+    
+    
