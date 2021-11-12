@@ -1,5 +1,7 @@
 secrets.py
-__pycache__/
-.pytest_cache
+
 test.py
 testing.ipynb
+
+__pycache__/
+.pytest_cache

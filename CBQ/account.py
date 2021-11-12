@@ -7,11 +7,14 @@ import hashlib
 
 
 class CoinbaseAccount:
-    def __init__(self, API_KEY, API_SECRET, API_PASSPHRASE):
+    def __init__(self, API_KEY, API_SECRET, API_PASSPHRASE, is_sandbox=False):
         self.API_KEY = API_KEY
         self.API_SECRET = API_SECRET
         self.API_PASSPHRASE = API_PASSPHRASE
-        self.BASE_PATH = "https://api.exchange.coinbase.com"
+        if is_sandbox:
+            self.BASE_PATH = "https://api-public.sandbox.exchange.coinbase.com"
+        else:
+            self.BASE_PATH = "https://api.exchange.coinbase.com"
 
     def create_request(self, method, path, add_headers=None, body=""):
 
