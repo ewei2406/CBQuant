@@ -41,7 +41,7 @@ from CBQ import visualizations
 
 book = acc.get_book("DOGE-USD")
 
-visualizations.show_book(b, 100, "DOGE-USD")
+visualizations.show_book(book, 100, "DOGE-USD")
 plt.show()
 ```
 <img src="images/DOGE_USD_Book.png" alt="drawing" width="500"/>
