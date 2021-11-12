@@ -33,3 +33,16 @@ def test_get_wallets():
     assert "price" in portfolio[0]
     assert "usd" in portfolio[0]
     assert "percentage" in portfolio[0]
+
+def test_get_book():
+    acc = account.CoinbaseAccount(
+        SANDBOX_API_KEY,
+        SANDBOX_API_SECRET,
+        SANDBOX_API_PASSPHRASE,
+        is_sandbox=True
+    )
+
+    book = acc.get_book("BTC-USD")
+
+    assert "bids" in book
+    assert "asks" in book
