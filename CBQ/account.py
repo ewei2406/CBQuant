@@ -89,15 +89,3 @@ class CoinbaseAccount:
         res = self.create_request("GET", f"/products/{pair}/book?level=2")
         book = json.loads(res.content)
         return book
-
-
-if __name__ == "__main__":
-    import secrets
-
-    acc = CoinbaseAccount(
-        API_KEY=secrets.API_KEY,
-        API_SECRET=secrets.API_SECRET,
-        API_PASSPHRASE=secrets.API_PASSPHRASE)
-
-    r = acc.get_book("DOGE-USD")
-    print(r.content)
