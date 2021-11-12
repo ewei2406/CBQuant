@@ -51,3 +51,13 @@ Using `pytest`
 ```python
 pytest CBQ
 ```
+Note: Set environmental variables first. All tests use the Sandbox API endpoint.
+
+Example: Using `pytest.ini`
+```
+[pytest]
+env =
+    SANDBOX_API_PASSPHRASE = YOUR_SANDBOX_API_PASSPHRASE
+    SANDBOX_API_KEY = YOUR_SANDBOX_API_KEY
+    SANDBOX_API_SECRET = YOUR_SANDBOX_API_SECRET
+```
