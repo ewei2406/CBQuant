@@ -2,6 +2,7 @@ secrets.py
 
 test.py
 testing.ipynb
+pytest.ini
 
 __pycache__/
 .pytest_cache

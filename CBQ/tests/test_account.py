@@ -17,6 +17,3 @@ def test_account_creation():
     assert acc.API_SECRET == API_SECRET
     assert acc.API_PASSPHRASE == API_PASSPHRASE
     assert acc.BASE_PATH == "https://api-public.sandbox.exchange.coinbase.com"
-
-def test_create_request():
-    
