@@ -30,9 +30,10 @@ jobs:
         
       - name: Install pytest
         run: pip install pytest
-        
-      - name: Install pytest-env
-        run: pip install pytest-env
 
       - name: Run tests
+        env:
+          SANDBOX_API_KEY: ${{ secrets.SANDBOX_API_KEY }}
+          SANDBOX_API_PASSPHRASE: ${{ secrets.SANDBOX_API_PASSPHRASE }}
+          SANDBOX_API_SECRET: ${{ secrets.SANDBOX_API_SECRET }}
         run: pytest CBQ
