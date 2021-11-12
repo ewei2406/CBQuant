@@ -2,9 +2,9 @@ from CBQ import account
 import os
 
 def test_account_creation():
-    API_PASSPHRASE = os.environ['API_PASSPHRASE'].strip('"')
-    API_KEY = os.environ['API_KEY'].strip('"')
-    API_SECRET = os.environ['API_SECRET'].strip('"')
+    API_PASSPHRASE = os.environ['SANDBOX_API_PASSPHRASE'].strip('"')
+    API_KEY = os.environ['SANDBOX_API_KEY'].strip('"')
+    API_SECRET = os.environ['SANDBOX_API_SECRET'].strip('"')
 
     acc = account.CoinbaseAccount(
         API_KEY,
