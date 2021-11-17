@@ -8,6 +8,10 @@ import hashlib
 
 class CoinbaseAccount:
     def __init__(self, API_KEY, API_SECRET, API_PASSPHRASE, is_sandbox=False):
+        """
+        Create a CoinbaseAccount using your API key, secret, and passphrase.
+        Set is_sandbox to true if you are using the sandbox API.
+        """
         self.API_KEY = API_KEY
         self.API_SECRET = API_SECRET
         self.API_PASSPHRASE = API_PASSPHRASE
@@ -17,7 +21,12 @@ class CoinbaseAccount:
             self.BASE_PATH = "https://api.exchange.coinbase.com"
 
     def create_request(self, method, path, add_headers=None, body=""):
-
+        """
+        Creates a 'GET' or 'POST' request to the base URL. 
+        Automatically authenticates and signs headers. 
+        
+        Specify additional headers using add_headers, and body content using body.
+        """
         timestamp = str(int(time.time()))
 
         if method == "GET":
@@ -52,6 +61,9 @@ class CoinbaseAccount:
         return r
 
     def get_wallets(self):
+        """
+        Gets the wallets of an account as an array of dicts.
+        """
         res = self.create_request(
             'GET', '/accounts')
 
@@ -89,6 +101,9 @@ class CoinbaseAccount:
         return account
 
     def get_book(self, pair):
+        """
+        Gets the L2 order book data for a trading pair.
+        """
         res = self.create_request("GET", f"/products/{pair}/book?level=2")
         book = json.loads(res.content)
         return book
